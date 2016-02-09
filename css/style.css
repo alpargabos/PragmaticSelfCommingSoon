@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+}
+/* General styles and layout */
+
+body {
+    color: black;
+    font-family: 'Open Sans', Arial, sans-serif;
+    max-width: 100%;
+}
+
+.container {
+    overflow: hidden;
+    /* we don't want the pseudo-elements sticking out */
+    
+    max-width: 960px;
+}
+
+.container svg {
+    display: block;
+}
+
+section {
+    position: relative;
+    background: #2980b9;
+    color: #000;
+    text-align: center;
+}
+/*** Individual section styles and separators ***/
+/* Common style for pseudo-elements */
+
+section::before,
+section::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+header section {
+    min-height: 250px;
+}
+
+header h1 {
+    margin-bottom: 0px;
+}
+
+header i.fa {
+    font-size: 2em;
+    color: : rga(1, 1, 1) !important;
+}
+
+header h2 {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 1);
+}
+
+header p {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    text-transform: capitalize;
+    color: white;
+}
+
+
+.droid-icon{
+    margin-top: 40px;
+    width: 60px;
+    height:60px;
+}
+
+.color {
+    background-color: #F89406
+}
+
+.ss-style-doublediagonal {
+    z-index: 1;
+    padding-top: 2em;
+}
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after {
+    top: 0;
+    left: -25%;
+    z-index: -1;
+    width: 126%;
+    height: 10%;
+    -webkit-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    overflow: hidden;
+}
+
+.ss-style-doublediagonal::before {
+    height: 50%;
+    -webkit-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-transform-origin: 3% 0;
+    -ms-transform-origin: 3% 0;
+    transform-origin: 3% 0;
+    overflow: hidden;
+}
+
+section.main-content{
+    background: transparent;
+}
+
+
+section.main-content p {
+    color: #565656;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+
+section.main-content .input-group {
+    margin: 20px auto 0px auto;
+    width: 500px;
+}
+
+@media screen and (max-width: 550px) {
+    section.main-content .input-group {
+        width: 200px;
+        margin: 20px auto 0px auto;
+    }
+}
+
+section.main-content .btn-danger {
+    background-color: #f64747;
+    min-width: 69px;
+    font-size: 23px;
+    padding: 0;
+    border-color: #f64747;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+section.main-content .btn-danger:hover {
+    background-color: #464646;
+    border-color: #464646;
+    color: #f64747;
+}
+
+section.main-content .form-control {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+section.main-content .form-control:focus {
+    border-color: #F89406;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.2);
+}
+
+section.main-content ul li {
+    margin-right: 4%;
+}
+
+section.main-content ul li a {
+    color: black;
+    font-size: 18px;
+}
+
+section.main-content ul li a:hover {
+    color: dimgray;
+    font-size: 18px;
+}
+
+section.footer p {
+    margin-bottom: 0;
+}
+
+section.footer p a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer {
+    z-index: 1;
+    margin-top: 10%;
+    padding-top: 5px;
+    background: #F89406;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.footer::before,
+.footer::after {
+    top: 0;
+    left: -25%;
+    z-index: -1;
+    width: 125%;
+    height: 90%;
+    background: #F89406;
+    -webkit-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    overflow: hidden;
+}
+
+.footer::before {
+    height: 50%;
+    background: #F89406;
+    -webkit-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-transform-origin: 3% 0;
+    -ms-transform-origin: 3% 0;
+    transform-origin: 3% 0;
+    overflow: hidden;
+}
+
+.bgimg::before {
+    background: url('../img/bgimg.png') no-repeat top center;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.bgimg{
+    background: url('../img/bgimg.png') no-repeat top center;
+    background-size: cover;
+}

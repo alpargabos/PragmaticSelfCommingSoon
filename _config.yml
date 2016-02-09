@@ -1,0 +1,43 @@
+# Site wide configuration
+
+title: "DevDroids"
+description: "DevDroids coming soon"
+#if you modify locale please have a look at _data/messages.yml too
+locale: en
+#for meta name="author" :
+author: alpargabos
+
+#Target date in UTC / GMT
+countdown:
+  theme: flat-colors-wide
+  year: 2016
+  month: 3
+  day: 1
+  hour: 0
+  minute: 0
+
+# Site owner
+owner:
+  name: Alpar Gabos
+  email: me@alpargabos.com
+  twitter: alpargabos
+  google-plus: 104562603733196459325
+  facebook: alpar.gabos.3
+  instagramm: facebook
+  #Aboutlink = German "Impressum", provide url and caption (eg "Impressum")
+  aboutlink:
+    url: http://alpargabos.com/
+    caption: Alpar Gabos official website
+
+
+# Jekyll configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: /:categories/:title/
+kramdown:
+  toc_levels: 1..2
+highlighter: rouge
+
+
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
